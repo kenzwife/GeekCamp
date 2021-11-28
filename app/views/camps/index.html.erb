@@ -8,6 +8,7 @@
       <%= t.body %>
       <%= t.location %>
       <%= t.created_at %>
+      <%= t.user.email %>
       <%= link_to"詳細へ", camp_path(t.id) %>
       <%= link_to "編集する", edit_camp_path(t.id) %>
       <%= button_to "削除する", camp_path(t.id), method: :delete %>
