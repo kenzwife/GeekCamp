@@ -1,0 +1,9 @@
+<%= form_for @camp do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :size => 140 %> 
+  <%= f.label :body %>
+  <%= f.text_field :body, :size => 140 %> 
+  <%= f.label :location %>
+  <%= f.text_field :location, :size => 140 %> 
+  <%= f.submit "編集する" %>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>GeekCamp</h1>
+<h3>新規Camp</h3>
+<%= form_for @camp do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, :size => 140 %>
+    <%= f.label :body %>
+    <%= f.text_field :body, :size => 140 %>
+    <%= f.label :location %>
+    <%= f.text_field :location, :size => 140 %>
+  </div>
+  <%= f.submit "Campする" %>
+<% end %>
+<%= link_to "Camp一覧に戻る", camps_path %>

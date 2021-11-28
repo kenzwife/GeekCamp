@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geektwitter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>GeekCamp</h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "ホーム", camps_path %></li>
+        <li><%= link_to "新規投稿",new_camp_path %></li>
+      </ul>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Copyright © Carpediem ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>

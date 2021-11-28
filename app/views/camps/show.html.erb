@@ -1,0 +1,11 @@
+<h1>GeekCamp</h1>
+<h3>Camp詳細</h3>
+<div class="camp">
+  <p><%= @camp.title %></p>
+  <p><%= @camp.body %></p>
+  <p><%= @camp.location %></p>
+  <p><%= @camp.created_at %></p>
+</div>
+
+<%= link_to "Camp一覧に戻る", camps_path %>
+<%= link_to "編集する", edit_camp_path(@camp.id) %>

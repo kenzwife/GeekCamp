@@ -1,0 +1,23 @@
+<h1>GeekCamp</h1>
+<h3>Camp一覧</h3>
+<%= link_to "新規投稿へ", new_camp_path %>
+<div class="camps-container">
+  <% @camps.each do |t| %>
+    <div class="camp">
+      <%= t.title %>
+      <%= t.body %>
+      <%= t.location %>
+      <%= t.created_at %>
+      <%= link_to"詳細へ", camp_path(t.id) %>
+      <%= link_to "編集する", edit_camp_path(t.id) %>
+      <%= button_to "削除する", camp_path(t.id), method: :delete %>
+    </div>
+  <% end %>
+</div>
+
+  <% if user_signed_in? %>
+    <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to "新規登録", new_user_registration_path %></li>
+    <li><%= link_to "ログイン", new_user_session_path %></li>
+  <% end %>
